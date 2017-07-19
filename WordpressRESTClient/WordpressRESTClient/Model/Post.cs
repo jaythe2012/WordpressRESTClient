@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WordpressRESTClient.Model
+namespace WordpressAPI.Model
 {
-    class Post
+    public class Post
     {
+        public int id { get; set; }
+        public title title { get; set; }
+
+    }
+
+    public class title
+    {
+        public string rendered { get; set; }
     }
 }

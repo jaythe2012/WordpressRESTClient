@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WordpressRESTClient.Model
+namespace WordpressAPI.Model
 {
-    class Category
+    public class Category
     {
+        public int id { get; set; }
+
+        public string name { get; set;
+
+        }
+
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordpressRESTClient", "WordpressRESTClient\WordpressRESTClient.csproj", "{68629FD6-8A6E-4030-8B16-08F8528DF4A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordpressAPI", "WordpressRESTClient\WordpressAPI.csproj", "{68629FD6-8A6E-4030-8B16-08F8528DF4A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppClient", "AppClient\AppClient.csproj", "{7E136305-9A4C-4C34-BA55-BCD3858B83F3}"
 EndProject

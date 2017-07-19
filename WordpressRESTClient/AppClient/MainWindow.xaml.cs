@@ -11,6 +11,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WordpressAPI;
+using WordpressAPI.Model;
+
+
 
 namespace AppClient
 {
@@ -19,9 +23,26 @@ namespace AppClient
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private static string hostName = "http://amdavadblogs.apps-1and1.com";
+        RESTClient client = new RESTClient(hostName);
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void CategoriesCaller_Click(object sender, RoutedEventArgs e)
+        {
+            List<Category> resp = await client.GetAllCategories();
+            ListCategories.ItemsSource = resp;
+        }
+
+        private async void PostsCaller_Click(object sender, RoutedEventArgs e)
+        {
+            List<Post> resp = await client.GetAllPosts();
+            //ListPosts.ItemsSource = resp;
+
         }
     }
 }
