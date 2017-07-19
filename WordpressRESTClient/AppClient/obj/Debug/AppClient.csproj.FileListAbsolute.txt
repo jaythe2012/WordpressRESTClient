@@ -1,0 +1,13 @@
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\bin\Debug\AppClient.exe
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\bin\Debug\AppClient.pdb
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient.csprojResolveAssemblyReference.cache
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\MainWindow.g.cs
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\App.g.cs
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient_MarkupCompile.cache
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient_MarkupCompile.lref
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\MainWindow.baml
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient.g.resources
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient.Properties.Resources.resources
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient.csproj.GenerateResource.Cache
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient.exe
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\AppClient\obj\Debug\AppClient.pdb

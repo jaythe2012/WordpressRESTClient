@@ -1,0 +1,4 @@
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\WordpressRESTClient\bin\Debug\WordpressRESTClient.dll
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\WordpressRESTClient\bin\Debug\WordpressRESTClient.pdb
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\WordpressRESTClient\obj\Debug\WordpressRESTClient.dll
+C:\Users\jayth\Documents\Repository\WordpressREST\WordpressRESTClient\WordpressRESTClient\obj\Debug\WordpressRESTClient.pdb
