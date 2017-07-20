@@ -18,4 +18,14 @@ namespace WordpressAPI.Model
     {
         public string rendered { get; set; }
     }
+    public class PostDetail
+    {
+        public int id { get; set; }
+        public Content content { get; set; }
+    }
+
+    public class Content
+    {
+        public string rendered { get; set; }
+    }
 }

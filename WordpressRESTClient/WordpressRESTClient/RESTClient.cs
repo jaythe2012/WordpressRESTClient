@@ -75,6 +75,17 @@ namespace WordpressAPI
             media = JsonConvert.DeserializeObject<Media>(mediaString);
             return media;
         }
+
+        public async Task<String> GetPostDetailById(int id)
+        {
+            PostDetail postDetail = new PostDetail();
+            string url = HostName + "/wp-json/wp/v2/posts/" + id;
+            HttpClient client = new HttpClient();
+            var getAsync = await client.GetStringAsync(url);
+            string postDetailString = getAsync.ToString();
+            postDetail = JsonConvert.DeserializeObject<PostDetail>(postDetailString);
+            return postDetail.content.rendered;
+        }
     }
 
 }

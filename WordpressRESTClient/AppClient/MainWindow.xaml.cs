@@ -85,8 +85,16 @@ namespace AppClient
         {
             int mediaId = Convert.ToInt32(textMediaId.Text);
             Media resp = await client.GetFeaturedImageById(mediaId);
-            textFeaturedMedia.Text = "FeaturedMediaURL : " + resp.media_details.sizes.medium.source_url.ToString();
+            //textFeaturedMedia.Text = "FeaturedMediaURL : " + resp.media_details.sizes.medium.source_url.ToString();
             FeaturedImage.Source = new BitmapImage(new Uri(resp.media_details.sizes.medium.source_url.ToString()));
+        }
+
+        private async void PostById_Click(object sender, RoutedEventArgs e)
+        {
+            int postId = Convert.ToInt32(textPostId.Text);
+            String resp = await client.GetPostDetailById(postId);
+            myWebBrowser.NavigateToString(resp);
+
         }
     }
 }

@@ -33,6 +33,12 @@
                 </Button>
             </StackPanel>
 
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="textPostId" Margin="0 10 0 0" Width="20"></TextBox>
+                <Button Grid.Column="0" Name="PostByIdCaller" Content=" Post detail By Id" Click="PostById_Click" Height="20" Width="120" Margin=" 5 10 0 0" >
+                </Button>
+            </StackPanel>
+
 
         </StackPanel>
         <ListView Grid.Column="1" Name="ListCategories" Margin="10 10 0 0" VerticalAlignment="Top" Height="150">
@@ -67,8 +73,9 @@
         </ListView>
 
         <StackPanel Grid.Column="2">
-               <TextBlock Name="textFeaturedMedia" Text="FeaturedMediaURL : "></TextBlock>
-            <Image Name="FeaturedImage" Height="300" Width="300" Margin="0 50 0 0"></Image>
+             <!--<TextBlock Name="textFeaturedMedia" Text="FeaturedMediaURL : "></TextBlock>-->
+            <Image Name="FeaturedImage" Height="20" Width="60" Margin="0 10 0 0"></Image>
+            <WebBrowser Height="500" Name="myWebBrowser"></WebBrowser>
         </StackPanel>
         
         <!--</ListView>
