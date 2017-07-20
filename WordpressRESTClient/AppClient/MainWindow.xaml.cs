@@ -47,7 +47,18 @@ namespace AppClient
             if (!String.IsNullOrEmpty(LimitText.Text))
                 limit = Convert.ToInt32(LimitText.Text);
             List<Post> resp = await client.GetAllPosts(limit);
+
             ListPosts.ItemsSource = resp;
+
+            foreach (Post post in resp)
+            {
+                Media resp2 = await client.GetFeaturedImageById(post.featured_media);
+                post.imagePath = resp2.media_details.sizes.medium.source_url.ToString();
+            }
+            ListPosts.ItemsSource = resp;
+            ListPosts.Items.Refresh();
+
+
         }
 
         private async void PostsByCategory_Click(object sender, RoutedEventArgs e)
@@ -57,13 +68,23 @@ namespace AppClient
             if (!String.IsNullOrEmpty(LimitText.Text))
                 limit = Convert.ToInt32(LimitText.Text);
             List<Post> resp = await client.GetPostsByCategoryId(categoryId, limit);
+            //ListPosts.ItemsSource = resp;
+
+            foreach(Post post in resp)
+            {
+                Media resp2 = await client.GetFeaturedImageById(post.featured_media);
+                post.imagePath = resp2.media_details.sizes.medium.source_url.ToString();
+            }
             ListPosts.ItemsSource = resp;
+            ListPosts.Items.Refresh();
+
+
         }
-    
+
         private async void MediaById_Click(object sender, RoutedEventArgs e)
         {
-            int Media = Convert.ToInt32(textMediaId.Text);
-            Media resp = await client.GetFeaturedImageById(Media);
+            int mediaId = Convert.ToInt32(textMediaId.Text);
+            Media resp = await client.GetFeaturedImageById(mediaId);
             textFeaturedMedia.Text = "FeaturedMediaURL : " + resp.media_details.sizes.medium.source_url.ToString();
             FeaturedImage.Source = new BitmapImage(new Uri(resp.media_details.sizes.medium.source_url.ToString()));
         }
