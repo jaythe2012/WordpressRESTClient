@@ -9,7 +9,7 @@ namespace WordpressAPI.Model
     {
         public int id { get; set; }
         public title title { get; set; }
-
+        public int featured_media { get; set; }
     }
 
     public class title

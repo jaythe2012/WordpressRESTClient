@@ -5,44 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="650">
+        Title="MainWindow" Height="750" Width="950">
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-
-
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="0" Name="CategoriesCaller" Content="Get All Categories" Click="CategoriesCaller_Click" Height="50" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+        <StackPanel Orientation="Vertical">
+            <Button Grid.Column="0" Name="CategoriesCaller" Content="Get All Categories" Click="CategoriesCaller_Click" Height="50" Width="100" ></Button>
+            <Button Grid.Column="0" Name="PostsCaller" Content="Get All Posts" Click="PostsCaller_Click" Height="50" Width="100" Margin=" 0 10 0 0" ></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="textCategoryId" Margin="0 10 0 0" Width="20"></TextBox>
+                <Button Grid.Column="0" Name="PostssCaller" Content="Posts by categoryID" Click="PostsByCategory_Click" Height="20" Width="120" Margin=" 5 10 0 0" >
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBox Name="LimitText" Margin="0 10 0 0" Width="20"></TextBox>
+                <Label Content="Limit number" Margin="5 0 0 0"></Label>
+            </StackPanel>
 
-        <Button Grid.Column="0" Name="PostsCaller" Content="Get All Posts" Click="PostsCaller_Click" Height="50" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 100 0 0"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="textMediaId" Margin="0 10 0 0" Width="20"></TextBox>
+                <Button Grid.Column="0" Name="MediaCaller" Content="Featured Media By Id" Click="MediaById_Click" Height="20" Width="120" Margin=" 5 10 0 0" >
+                </Button>
+            </StackPanel>
 
+
+        </StackPanel>
         <ListView Grid.Column="1" Name="ListCategories" Margin="10 10 0 0" VerticalAlignment="Top" Height="300">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <WrapPanel>
+                    <StackPanel Orientation="Vertical">
                         <TextBlock Text="Id :"/>
                         <TextBlock Text="{Binding id}" FontWeight="Bold"/>
-                        <TextBlock Text="  Name :"/>
+                        <TextBlock Text="Name :"/>
                         <TextBlock Text="{Binding name}" FontWeight="Bold"/>
-                    </WrapPanel>
+                        <Rectangle Stroke="Red"></Rectangle>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView Grid.Column="1" Name="ListPosts" Margin="10 10 0 0" VerticalAlignment="Bottom" Height="350">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Id :"/>
+                        <TextBlock Text="{Binding id}" FontWeight="Bold"/>
+                        <TextBlock Text="Title :"/>
+                        <TextBlock Text="{Binding Path=title.rendered}" FontWeight="Bold"/>
+                        <TextBlock Text="Featured Media Id :"/>
+                        <TextBlock Text="{Binding featured_media}" FontWeight="Bold"/>
+                        <Rectangle Stroke="Red"></Rectangle>
+                    </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <ListView Grid.Column="1" Name="ListPosts" Margin="10 10 0 0" VerticalAlignment="Bottom" Height="300">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <WrapPanel>
-                        <TextBlock Text="Id :"/>
-                        <TextBlock Text="{Binding id}" FontWeight="Bold"/>
-                        <TextBlock Text="  Name :"/>
-                        <TextBlock Text="{Binding name}" FontWeight="Bold"/>
-                    </WrapPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <StackPanel Grid.Column="2">
+                <TextBlock Name="textFeaturedMedia" Text="FeaturedMediaURL : "></TextBlock>
+            <Image Name="FeaturedImage" Height="300" Width="300" Margin="0 50 0 0"></Image>
+        </StackPanel>
+        
+        <!--</ListView>
+        <ListView Grid.Column="2" Name="ListPostDetail" Margin="10 10 0 0" VerticalAlignment="Bottom" Height="500">
+        </ListView>-->
     </Grid>
 </Window>
